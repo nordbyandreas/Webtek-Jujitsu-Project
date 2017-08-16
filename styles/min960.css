@@ -1,0 +1,17 @@
+#navsect a {
+  width: 25%;
+}
+
+#article #main {
+  margin-right: 336px;
+  border-right: 1px solid #eee;
+}
+#article #more {
+  position: absolute;
+  width: 320px;
+  right: 0;
+  top: 0;
+}
+#article #more a {
+  display: block;
+}

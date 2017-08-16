@@ -1,0 +1,401 @@
+/*
+ Cooper Hewitt Typeface designed by Chester Jenkins
+ Licensed under SIL Open Font License
+  - copy readable at /fonts/OFL.txt
+*/
+
+@font-face {
+  font-family: CooperHewitt-Book;
+  src: url(../fonts/CooperHewitt-Book.woff) format('woff'),
+       url(../fonts/CooperHewitt-Book.otf)  format('opentype');
+}
+@font-face {
+  font-family: CooperHewitt-Bold;
+  src: url(../fonts/CooperHewitt-Bold.woff) format('woff'),
+       url(../fonts/CooperHewitt-Bold.otf)  format('opentype');
+}
+
+/* --== Global definitions ==-------------------------------- /
+| Appearance
+*/
+
+body {
+  background: #f6f6f6;
+  font: 16px CooperHewitt-Book;
+  margin: 0 auto;
+  padding-top: 64px;
+  max-width: 1920px;
+  overflow-y: scroll;
+}
+a {
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+a img {
+  border: none;
+}
+a:hover {
+  color: #04f;
+}
+b {
+  font-family: CooperHewitt-Bold;
+}
+p {
+  margin: 0;
+  padding: 12px 16px;
+}
+h1 {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0;
+  padding: 12px 16px;
+}
+h2 {
+  font: 20px CooperHewitt-Bold;
+  margin: 0;
+  padding: 12px 16px 0;
+}
+hr {
+  border: none;
+  background: #aaa;
+  height: 1px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding-bottom: 32px;
+}
+li {
+  border-bottom: 1px solid #eee;
+  padding: 8px;
+}
+
+/* Content placed within each container */
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* External links to other pages */
+.extlink {
+  color: #955;
+}
+.extlink:hover {
+  color: #f40;
+}
+
+/* Container for embedded iframe elements */
+#iframe {
+  padding-bottom: 50%;
+  position: relative;
+}
+#iframe iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Loading splash screen, only visible with JS */
+#splash {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --== Footer & header + navbar ==-------------------------- /
+| Appearance and position
+| Simple dropdown menus
+*/
+
+#footer {
+  border-top: 1px solid #eee;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}
+#footer span {
+  display: inline-block;
+  text-align: left;
+}
+#footer .content > * {
+  display: inline-block;
+  padding: 24px 5%;
+}
+
+#header {
+  -webkit-box-shadow: 0 15px 20px -20px #000;
+  -moz-box-shadow: 0 15px 20px -20px #000;
+  box-shadow: 0 15px 20px -20px #000;
+
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  top: 0;
+  left: 0;
+}
+#header img {
+  position: absolute;
+  display: block;
+  margin: 4px;
+  top: 0;
+}
+
+#navbar {
+  margin-top: 32px;
+  list-style: none;
+  text-align: right;
+}
+#navbar #menu {
+  display: none;
+  right: 12px;
+  top: 12px;
+}
+#navbar a {
+  display: block;
+  padding: 4px 12px;
+  height: 24px;
+}
+#navbar span {
+  background: #fff;
+  position: relative;
+  display: inline-block;
+}
+#navbar span .drop {
+  -webkit-box-shadow: 0 15px 20px -20px #000;
+  -moz-box-shadow: 0 15px 20px -20px #000;
+  box-shadow: 0 15px 20px -20px #000;
+  
+  background: #fff;
+  overflow: hidden;
+
+  /* Dropdown definitions */
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 160px;
+  display: none;
+}
+#navbar span:hover .drop {
+  display: block;
+}
+#navbar span .drop a {
+  border-top: 1px solid #eee;
+}
+
+/* --== Home page ==----------------------------------------- /
+| Appearance and position
+*/
+
+#index {
+  background: #fff;
+}
+
+#intro {
+  position: relative;
+  overflow: hidden;
+}
+#intro img {
+  width: 100%;
+  position: absolute;
+}
+#intro h1 {
+  font: 64px CooperHewitt-Bold;
+  font-weight: bold;
+  margin-top: 15%;
+  position: relative;
+  text-align: center;
+}
+#intro p {
+  font-size: 24px;
+  margin: 16px 10% 10%;
+  position: relative;
+  text-align: center;
+}
+#intro p span {
+  display: inline-block;
+}
+
+#navsect {
+  font-size: 0;
+}
+#navsect a {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  text-shadow: 0 1px 2px #000;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#navsect a h1 {
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+
+  font-size: 20px;
+  padding: 12px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+#navsect a p {
+  font-size: 16px;
+  padding: 0 12px 12px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+#navsect a img {
+  display: inline-block;
+  width: 100%;
+}
+
+#photolink {
+  font-size: 40px;
+  padding: 48px 0;
+  text-align: center;
+}
+
+/* --== Generic subpage features ==-------------------------- /
+| Appearance and position
+*/
+
+#title {
+  background: #000;
+  color: #fff;
+  height: 240px;
+  position: relative;
+}
+#title img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+#title h1 {
+  font-size: 64px;
+  position: absolute;
+  bottom: 0;
+  text-shadow: 0 1px 2px #000;
+}
+
+#article {
+  background: #fff;
+  text-align: justify;
+  color: #555;
+  padding-bottom: 48px;
+}
+#article .content, #article #main {
+  position: relative;
+}
+#article #more {
+  background: #fff;
+}
+#article #more a {
+  display: inline-block;
+  font-size: 20px;
+  padding: 8px 16px;
+}
+#article br {clear:both}
+
+/* --== Other individual features ==------------------------- /
+| Appearance and position
+*/
+
+#gallery {
+  font-size: 0;
+}
+#gallery a {
+  display: inline-block;
+  overflow: hidden;
+  width: 50%;
+}
+#gallery a:hover {
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+}
+#gallery img {
+  width: 100%;
+}
+#gallery canvas {
+  -ms-touch-action: none;
+  touch-action: none;
+
+  display: none;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.contact {
+  text-align: left;
+}
+.contact img {
+  float: left;
+  padding: 12px 16px 80px;
+}
+.contact p {
+  color: #555;
+}
+#facebook h2 {
+  color: #3b579d;
+  text-decoration: underline;
+}
+#email h2 {
+  color: #f40;
+  text-decoration: underline;
+}
+
+#roadtip {
+  margin-top: 16px;
+  position: absolute;
+  left: 50%;
+}
+#roadmap {
+  font-size: 0;
+  margin-top: 24px;
+  position: relative;
+  overflow-x: scroll;
+  white-space: nowrap;
+  width: 50%;
+}
+#roadmap > div {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  white-space: normal;
+  width: 100%;
+}
+#roadmap img {
+  display: inline-block;
+  width: 100%;
+}
+#roadmap p {
+  font-size: 16px;
+}
+#roadmap div div {
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+
+  border: 0 solid #fff;
+  border-width: 1px 0;
+  color: #fff;
+  text-shadow: 0 1px 2px #000;
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+}
+#roadmap #info {
+  top: 1px;
+  bottom: auto;
+  display: none;
+}
+#roadmap h1, #roadmap h2 {
+  padding: 8px 16px;
+}

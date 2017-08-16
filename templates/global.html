@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Separately redefined media queries, controlled by JS in case of no @media support -->
+    <link rel="stylesheet" href="styles/min480.css" media="(min-width: 480px)">
+    <link rel="stylesheet" href="styles/max720.css" media="(max-width: 720px)">
+    <link rel="stylesheet" href="styles/min960.css" media="(min-width: 960px)">
+    
+    <title>{{htmltitle}}</title>
+  </head>
+  <body>
+    <script src="scripts/global.js"></script>
+
+    {{template}}
+
+    <!-- Global footer -->
+    <div id="footer"> <div class="content">
+      <a target="_blank" href="http://ntnui.no/">
+        <img alt="NTNUI" src="images/global/icon-ntnui.png">
+      </a>
+      <a target="_blank" href="http://www.facebook.com/groups/ntnui.jujitsu/">
+        <img alt="Facebook" src="images/global/icon-fb.png">
+        <span>Join us on <br> Facebook</span>
+      </a>
+      <span>
+        © Copyright 2013-2015 NTNUI Ju Jitsu. <br>
+        All rights reserved.
+      </span>
+    </div> </div>
+
+    <!-- Global header -->
+    <div id="header"> <div class="content">
+      <a href="." title="Return to index">
+        <img alt="Logo" src="images/global/logo-navbar.png">
+      </a>
+      <div id="navbar">
+        <img alt="Menu" src="images/global/icon-menu.gif" id="menu">
+
+        <!-- Menu elements with hidden submenus in div elements -->
+        <span> <a href=".">HOME</a> </span>
+        <span> <a>ABOUT</a>
+          <span class="drop">
+            <a href="?page=sport">Ju Jitsu</a>
+            <a href="?page=group">Our group</a>
+          </span>
+        </span>
+        <span> <a>TRAINING</a>
+          <span class="drop">
+            <a href="?page=practice">What we practice</a>
+            <a href="?page=culture" >Training culture</a>
+            <a href="?page=schedule">Our schedule</a>
+          </span>
+        </span>
+        <span> <a href="?page=photos">PHOTOS</a> </span>
+        <span>
+          <a href="http://drive.google.com/folderview?id=0B5lLylGevcItOTd3M1UtTG95WW8&amp;usp=sharing"
+             target="_blank" class="extlink" title="External link to archive on Google Drive">ARCHIVE</a>
+        </span>
+        <span> <a>CONTACT</a>
+          <span class="drop">
+            <a href="?page=contact">Contact info</a>
+            <a href="?page=roadmap">Where to find us</a>
+          </span>
+        </span>
+      </div>
+    </div> </div>
+
+    {{script}}
+  </body>
+</html>
